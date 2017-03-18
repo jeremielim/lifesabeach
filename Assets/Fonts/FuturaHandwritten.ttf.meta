@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d9670f6537dd54417b3f94f7c4b5229b
+timeCreated: 1489963184
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: FuturaHandwritten
+  fontNames:
+  - FuturaHandwritten
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
