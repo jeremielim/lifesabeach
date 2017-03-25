@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class CanTalker : MonoBehaviour
+public class ControllerCan : MonoBehaviour
 {
     private DialogManager dm;
 
@@ -23,5 +23,10 @@ public class CanTalker : MonoBehaviour
     public void OnTriggerExit(Collider other)
     {
         dm.SetState("empty");
+    }
+
+    void Update()
+    {
+        
     }
 }

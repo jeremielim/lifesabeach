@@ -2,8 +2,13 @@
 
 public class ClickToSelect : MonoBehaviour
 {
-
     RaycastHit hitInfo = new RaycastHit();
+	private DialogManager dm;
+
+	void Start()
+	{
+		dm = GameObject.Find("DialogManager").GetComponent<DialogManager>();
+	}
 
     void Update()
     {
@@ -13,7 +18,10 @@ public class ClickToSelect : MonoBehaviour
         {
             if (Physics.Raycast(ray.origin, ray.direction, out hitInfo))
             {
-                Debug.Log(hitInfo.transform.gameObject);
+                if (hitInfo.transform.gameObject.name == "Shell")
+                {
+                    dm.SetState("CrabWithShell");
+                }
             }
         }
     }
