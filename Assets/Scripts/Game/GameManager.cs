@@ -6,36 +6,35 @@ public class GameManager : MonoBehaviour
     public static Vector3 playerPosition = Vector3.zero;
     public static Vector3 camPosition = Vector3.zero;
 
-    public static bool canPickUpShell;
+    public static bool canPickUpShell = false;
+    public static bool hasCan = false;
+
     private Transform player;
     private Transform cam;
 
-	public static GameManager Instance
+    public static GameManager Instance
     {
         get;
         protected set;
     }
-	
-    public void Awake() 
+
+    public void Awake()
     {
         //if there is already an instance, destroy it.
-        if ( Instance != null )
+        if (Instance != null)
         {
-            Destroy( Instance.gameObject );
+            Destroy(Instance.gameObject);
         }
 
         //assign the static variable to be this object, so we can get it from anywhere
         Instance = this;
 
         //Unity will never automatically destroy this object
-        DontDestroyOnLoad( gameObject );
+        DontDestroyOnLoad(gameObject);
     }
-
 
     void Start()
     {
-        canPickUpShell = false;
-
         if (SceneManager.GetActiveScene().name == "Beach")
         {
             player = GameObject.Find("Player").transform;
@@ -45,5 +44,12 @@ public class GameManager : MonoBehaviour
             cam.position = camPosition;
         }
 
+        if (SceneManager.GetActiveScene().name == "Crab")
+        {
+            if (hasCan)
+            {
+                GameObject.Find("CanFollower").transform.Find("CanFollowerPrefab").gameObject.SetActive(true);
+            }
+        }
     }
 }

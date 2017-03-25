@@ -23,7 +23,7 @@ public class DialogManager : MonoBehaviour
 				return info.text;
 			}
 		}
-		return "Can't find state";
+		return "Newp";
 	}
 
 	public void SetState ( string key )
