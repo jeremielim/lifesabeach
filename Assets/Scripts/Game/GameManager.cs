@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 
 public class GameManager : MonoBehaviour {
-	
-	public static bool hasCan;
+	public static bool canPickUpShell;
 
-	void Awake () {
-		hasCan = false;
-	}	
+	void Awake()
+	{
+		canPickUpShell = false;
+	}
 }

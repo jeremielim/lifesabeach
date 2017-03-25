@@ -3,12 +3,12 @@
 public class ClickToSelect : MonoBehaviour
 {
     RaycastHit hitInfo = new RaycastHit();
-	private DialogManager dm;
+    private DialogManager dm;
 
-	void Start()
-	{
-		dm = GameObject.Find("DialogManager").GetComponent<DialogManager>();
-	}
+    void Start()
+    {
+        dm = GameObject.Find("DialogManager").GetComponent<DialogManager>();
+    }
 
     void Update()
     {
@@ -20,7 +20,17 @@ public class ClickToSelect : MonoBehaviour
             {
                 if (hitInfo.transform.gameObject.name == "Shell")
                 {
-                    dm.SetState("CrabWithShell");
+
+                    if (!GameManager.canPickUpShell)
+                    {
+                        dm.SetState("CrabWithShell");
+                    }
+                    else
+                    {
+                        dm.SetState("PickupShell");
+                        hitInfo.transform.gameObject.SetActive(false);
+                    }
+
                 }
             }
         }

@@ -9,24 +9,25 @@ public class ControllerCan : MonoBehaviour
         dm = GameObject.Find("DialogManager").GetComponent<DialogManager>();
     }
 
+    // void OnTriggerEnter(Collider other)
+    // {
+    //     if(other.gameObject.name == "Shell") {
+    //         other.gameObject.GetComponent<NavMeshAgent>().speed = 0;
+    //         dm.SetState("CrabMoveToCan");
+    //     }
+    // }
+
     public void OnTriggerStay(Collider other)
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             gameObject.SetActive(false);
             dm.SetState("can");
-
-            GameManager.hasCan = true;
         }
     }
 
     public void OnTriggerExit(Collider other)
     {
-        dm.SetState("empty");
-    }
-
-    void Update()
-    {
-        
+        // dm.SetState("empty");
     }
 }
