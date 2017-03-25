@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class CanTalker : MonoBehaviour
+public class ControllerCan : MonoBehaviour
 {
     private DialogManager dm;
 
@@ -9,19 +9,25 @@ public class CanTalker : MonoBehaviour
         dm = GameObject.Find("DialogManager").GetComponent<DialogManager>();
     }
 
+    // void OnTriggerEnter(Collider other)
+    // {
+    //     if(other.gameObject.name == "Shell") {
+    //         other.gameObject.GetComponent<NavMeshAgent>().speed = 0;
+    //         dm.SetState("CrabMoveToCan");
+    //     }
+    // }
+
     public void OnTriggerStay(Collider other)
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             gameObject.SetActive(false);
             dm.SetState("can");
-
-            GameManager.hasCan = true;
         }
     }
 
     public void OnTriggerExit(Collider other)
     {
-        dm.SetState("empty");
+        // dm.SetState("empty");
     }
 }

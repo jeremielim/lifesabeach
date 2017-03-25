@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class CoconutTalker : MonoBehaviour
+public class ControllerCoconut : MonoBehaviour
 {	
     private DialogManager dm;
 
