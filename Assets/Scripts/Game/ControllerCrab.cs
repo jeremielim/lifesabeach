@@ -17,7 +17,7 @@ public class ControllerCrab : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if(other.gameObject.name == "Can") {
+		if(other.gameObject.name == "CanFollowerPrefab") {
 			GameManager.canPickUpShell = true;
 			other.gameObject.SetActive(false);
 			canMoving.transform.position = other.transform.position;
