@@ -13,7 +13,10 @@ public class PickUpObject : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            gameObject.SetActive(false);
+            if (gameObject.layer == 8)
+            {
+                gameObject.SetActive(false);
+            }
 
             if (gameObject.name == "Can")
             {
@@ -25,6 +28,11 @@ public class PickUpObject : MonoBehaviour
             {
                 dm.SetState("stickPickup");
                 GameManager.hasStick = true;
+            }
+
+            if (gameObject.name == "Coconut")
+            {
+                dm.SetState("coconutPickup");
             }
         }
     }
