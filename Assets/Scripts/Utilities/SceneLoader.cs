@@ -11,6 +11,7 @@ public class SceneLoader : MonoBehaviour
         if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.Space))
         {
             SceneManager.LoadScene(sceneToLoad);
+            GameManager.playerPosition = GameObject.Find("Player").transform.position;
         }
     }
 
