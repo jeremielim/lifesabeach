@@ -11,6 +11,17 @@ public class SceneLoader : MonoBehaviour
         if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.Space))
         {
             SceneManager.LoadScene(sceneToLoad);
+            GameManager.playerPosition = GameObject.Find("Player").transform.position;
         }
+    }
+
+    void Update()
+    {
+        // Go back to main beach scene
+        if (SceneManager.GetActiveScene().name != "Beach" && Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(sceneToLoad);
+        }
+
     }
 }
