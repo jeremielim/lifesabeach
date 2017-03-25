@@ -52,5 +52,13 @@ public class GameManager : MonoBehaviour
                 GameObject.Find("CanFollower").transform.Find("CanFollowerPrefab").gameObject.SetActive(true);
             }
         }
+
+        if (SceneManager.GetActiveScene().name == "RockPool") {
+            if (hasStick)
+            {
+                GameObject.Find("Stick").transform.Find("StickPrefab").gameObject.SetActive(true);
+                GameObject.Find("Stick").GetComponent<Caster>().enabled = true;
+            }
+        }
     }
 }

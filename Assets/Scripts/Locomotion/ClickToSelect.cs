@@ -30,7 +30,10 @@ public class ClickToSelect : MonoBehaviour
                         dm.SetState("PickupShell");
                         hitInfo.transform.gameObject.SetActive(false);
                     }
+                }
 
+                if(hitInfo.transform.gameObject.name == "Urchin") {
+                    dm.SetState("PickupUrchin");
                 }
             }
         }
