@@ -13,4 +13,14 @@ public class SceneLoader : MonoBehaviour
             SceneManager.LoadScene(sceneToLoad);
         }
     }
+
+    void Update()
+    {
+        // Go back to main beach scene
+        if (SceneManager.GetActiveScene().name != "Beach" && Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(sceneToLoad);
+        }
+
+    }
 }
