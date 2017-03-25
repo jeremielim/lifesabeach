@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public static bool canPickUpShell = false;
     public static bool hasCan = false;
+    public static bool hasStick = false;
 
     private Transform player;
     private Transform cam;
