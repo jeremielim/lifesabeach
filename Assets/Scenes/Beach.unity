@@ -710,12 +710,12 @@ GameObject:
   - component: {fileID: 1044859440}
   - component: {fileID: 1044859439}
   - component: {fileID: 1044859443}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Coconut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!23 &1044859439
 MeshRenderer:
@@ -788,7 +788,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1044859438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd0c2464bb4d44ce6b3806b3c9aaafa6, type: 3}
+  m_Script: {fileID: 11500000, guid: a1ea86ff9a8c8459883736b76b04eaf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1081753149
@@ -903,6 +903,10 @@ Prefab:
     - target: {fileID: 100000, guid: 4e5198029c6fc466dab6855654323171, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 4e5198029c6fc466dab6855654323171, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e5198029c6fc466dab6855654323171, type: 3}
@@ -1149,6 +1153,10 @@ Prefab:
     - target: {fileID: 400000, guid: 7f9279b265c6842b38af88880d8f9261, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 7f9279b265c6842b38af88880d8f9261, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f9279b265c6842b38af88880d8f9261, type: 3}
