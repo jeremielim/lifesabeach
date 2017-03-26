@@ -18,7 +18,7 @@ public class PickUpObject : MonoBehaviour
                 gameObject.SetActive(false);
             }
 
-            if (gameObject.name == "Can")
+            if (gameObject.name == "CanEmpty")
             {
                 dm.SetState("canPickup");
                 GameManager.hasCan = true;

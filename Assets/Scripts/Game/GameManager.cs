@@ -43,6 +43,22 @@ public class GameManager : MonoBehaviour
 
             cam = GameObject.Find("Main Camera").transform;
             cam.position = camPosition;
+
+            if (hasCan)
+            {
+                GameObject.Find("CanEmpty").transform.gameObject.SetActive(false);
+            }
+
+            if (hasStick)
+            {
+                GameObject.Find("Stick").transform.gameObject.SetActive(false);
+            }
+
+            if (canPickUpShell)
+            {
+                GameObject.Find("Crab").transform.Find("Shell").gameObject.SetActive(false);
+                GameObject.Find("Crab").transform.Find("CanWithCrab").gameObject.SetActive(true);
+            }
         }
 
         if (SceneManager.GetActiveScene().name == "Crab")
@@ -51,9 +67,16 @@ public class GameManager : MonoBehaviour
             {
                 GameObject.Find("CanFollower").transform.Find("CanFollowerPrefab").gameObject.SetActive(true);
             }
+
+            if (canPickUpShell) 
+            {
+                GameObject.Find("Crab").transform.Find("Shell").gameObject.SetActive(false);
+                GameObject.Find("Crab").transform.Find("CanWithCrab").gameObject.SetActive(true);
+            }
         }
 
-        if (SceneManager.GetActiveScene().name == "RockPool") {
+        if (SceneManager.GetActiveScene().name == "RockPool")
+        {
             if (hasStick)
             {
                 GameObject.Find("Stick").transform.Find("StickPrefab").gameObject.SetActive(true);
