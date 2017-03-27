@@ -11,3 +11,7 @@ EditorBuildSettings:
     path: Assets/Scenes/RockPool.unity
   - enabled: 1
     path: Assets/Scenes/Crab.unity
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+  - enabled: 1
+    path: Assets/Scenes/End.unity

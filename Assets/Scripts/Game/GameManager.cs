@@ -3,6 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static int curShells = 0;
+    public static int winShells = 1;
+
     public static Vector3 playerPosition = Vector3.zero;
     public static Vector3 camPosition = Vector3.zero;
 
@@ -83,5 +86,14 @@ public class GameManager : MonoBehaviour
                 GameObject.Find("Stick").GetComponent<Caster>().enabled = true;
             }
         }
+    }
+
+    /// <summary>
+    /// Update is called every frame, if the MonoBehaviour is enabled.
+    /// </summary>
+    void Update()
+    {
+        if(curShells == winShells)
+            SceneManager.LoadScene("End");
     }
 }

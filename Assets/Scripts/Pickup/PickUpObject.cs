@@ -18,6 +18,13 @@ public class PickUpObject : MonoBehaviour
                 gameObject.SetActive(false);
             }
 
+            if(gameObject.name == "ShellBeach")
+            {
+                GameManager.curShells += 1;
+                gameObject.SetActive(false);
+                dm.SetState("shellBeachPickup");
+            }
+
             if (gameObject.name == "CanEmpty")
             {
                 dm.SetState("canPickup");
