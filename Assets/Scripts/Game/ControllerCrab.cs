@@ -4,14 +4,14 @@ using UnityEngine.AI;
 public class ControllerCrab : MonoBehaviour {
 	private DialogManager dm;
 	private GameObject shell;
-	private GameObject canMoving;
+	private GameObject canWithCrab;
 	private GameObject ground;
 
 	void Start()
     {
         dm = GameObject.Find("DialogManager").GetComponent<DialogManager>();
 		shell = transform.Find("Shell").gameObject;
-		canMoving = transform.Find("CanMoving").gameObject;
+		canWithCrab = transform.Find("CanWithCrab").gameObject;
 		ground = GameObject.Find("Ground");
     }
 
@@ -20,10 +20,10 @@ public class ControllerCrab : MonoBehaviour {
 		if(other.gameObject.name == "CanFollowerPrefab") {
 			GameManager.canPickUpShell = true;
 			other.gameObject.SetActive(false);
-			canMoving.transform.position = other.transform.position;
+			canWithCrab.transform.position = other.transform.position;
             gameObject.GetComponent<NavMeshAgent>().speed = 0.8f;
 			shell.transform.parent = ground.transform;
-			canMoving.SetActive(true);
+			canWithCrab.SetActive(true);
             dm.SetState("CrabMoveToCan");
 			
         }
