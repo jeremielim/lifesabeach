@@ -316,6 +316,7 @@ GameObject:
   - component: {fileID: 167033558}
   - component: {fileID: 167033559}
   - component: {fileID: 167033560}
+  - component: {fileID: 167033561}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -370,6 +371,86 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Beach
+--- !u!82 &167033561
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 167033556}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e71aa0987a164459985db70808e3b5cf, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1001 &225042452
 Prefab:
   m_ObjectHideFlags: 0
@@ -556,6 +637,10 @@ Prefab:
     - target: {fileID: 100000, guid: a1d1ea94ac9a847718e05e79510b92a6, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a1d1ea94ac9a847718e05e79510b92a6, type: 3}
+      propertyPath: m_Name
+      value: ShellRockPool
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a1d1ea94ac9a847718e05e79510b92a6, type: 3}
@@ -763,7 +848,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogEntries:
   - key: PickupUrchin
-    text: Ow!
+    text: Ouch!
+  - key: PickupShell
+    text: Mathemathical!
   dialogText: {fileID: 1735413834}
 --- !u!4 &1007616175
 Transform:
@@ -966,6 +1053,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1369782699 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: a1d1ea94ac9a847718e05e79510b92a6, type: 3}
+  m_PrefabInternal: {fileID: 568648185}
+--- !u!65 &1369782700
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1369782699}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.435581, y: 0.837817, z: 1.361793}
+  m_Center: {x: 0.019486487, y: 0.0043585002, z: -0.06439251}
 --- !u!1 &1642451607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,6 +1228,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 947909146a9e9480990fa546f555c86f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b05a372a2c5734eccbd671c76fc0a2ca, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 947909146a9e9480990fa546f555c86f, type: 3}
   m_IsPrefabParent: 0

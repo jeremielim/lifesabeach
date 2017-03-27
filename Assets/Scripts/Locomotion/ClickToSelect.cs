@@ -18,6 +18,10 @@ public class ClickToSelect : MonoBehaviour
         {
             if (Physics.Raycast(ray.origin, ray.direction, out hitInfo))
             {
+                if (hitInfo.transform.gameObject.name == "ShellRockPool") {
+                    hitInfo.transform.gameObject.SetActive(false);
+                    dm.SetState("PickupShell");
+                } 
                 if (hitInfo.transform.gameObject.name == "Shell")
                 {
 
