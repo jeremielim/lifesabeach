@@ -1,37 +1,27 @@
 fileFormatVersion: 2
-guid: b56dcfa3f7e30427a9a7342225f8c9fd
-timeCreated: 1490514508
+guid: 9655a76a25afb405481480d4bf67978c
+timeCreated: 1490597598
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
     100002: Sand
-    100004: Wall
-    100006: Cube
-    100008: Fence
-    100010: Platform
+    100004: Slope
+    100006: Wall
     400000: //RootNode
     400002: Sand
-    400004: Wall
-    400006: Cube
-    400008: Fence
-    400010: Platform
+    400004: Slope
+    400006: Wall
     2300000: Sand
-    2300002: Wall
-    2300004: Cube
-    2300006: Fence
-    2300008: Platform
+    2300002: Slope
+    2300004: Wall
     3300000: Sand
-    3300002: Wall
-    3300004: Cube
-    3300006: Fence
-    3300008: Platform
-    4300000: Wall
-    4300002: Sand
-    4300004: Cube
-    4300006: Fence
-    4300008: Platform
+    3300002: Slope
+    3300004: Wall
+    4300000: Slope
+    4300002: Wall
+    4300004: Sand
     7400000: Default Take
     9500000: //RootNode
   materials:
