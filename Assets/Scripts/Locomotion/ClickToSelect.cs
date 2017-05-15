@@ -21,6 +21,7 @@ public class ClickToSelect : MonoBehaviour
                 if (hitInfo.transform.gameObject.name == "ShellRockPool") {
                     hitInfo.transform.gameObject.SetActive(false);
                     dm.SetState("PickupShell");
+                    GameManager.curShells += 1;
                 } 
                 if (hitInfo.transform.gameObject.name == "Shell")
                 {
@@ -33,6 +34,7 @@ public class ClickToSelect : MonoBehaviour
                     {
                         dm.SetState("PickupShell");
                         hitInfo.transform.gameObject.SetActive(false);
+                        GameManager.curShells += 1;
                     }
                 }
 
