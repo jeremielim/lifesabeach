@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static int curShells = 0;
-    public static int winShells = 1;
+    public static int winShells = 3;
 
     public static Vector3 playerPosition = Vector3.zero;
     public static Vector3 camPosition = Vector3.zero;
